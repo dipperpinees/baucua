@@ -1,0 +1,72 @@
+.plate {
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    &-plate {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 200px;
+        transform: translateX(-50%);
+    }
+
+    &-bowl {
+        position: absolute;
+        top: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 147px;
+    }
+
+    &-cards {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        display: flex;
+        top: 96px;
+        left: 50%;
+        & div {
+            width: 36px;
+            height: 36px;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 4px;
+            transform: perspective(75em) rotateX(18deg);
+            box-shadow: rgb(22 31 39 / 42%) 0px 60px 123px -25px, rgb(19 26 32 / 8%) 0px 35px 75px -35px;
+            border-radius: 8px;
+            border: 1px solid;
+            border-color: rgb(213, 220, 226) rgb(213, 220, 226) rgb(184, 194, 204);
+        }
+        & img {
+            width: 28px;
+        }
+    }
+
+    & button {
+        top: 95px;
+        left: 50%;
+        font-size: 24px;
+        transform: translateX(-50%);
+    }
+}
+
+.shake {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }

@@ -1,0 +1,33 @@
+.board {
+    width: 900px;
+    height: 450px;
+    background-color: #1C7B28;
+    border-radius: 80px;
+    border: 12px solid #140200;
+    position: relative;
+    // position: fixed;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+
+    & > img {
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 56px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .board {
+        width: 500px;
+        height: 250px;
+        border: 12px solid #b1dcd7;
+        border-radius: 112px;
+
+        & > img {
+            width: 40px;
+        }
+    }
+}
